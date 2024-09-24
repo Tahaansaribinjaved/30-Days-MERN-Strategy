@@ -1,0 +1,72 @@
+Here are the basic **CRUD (Create, Read, Update, Delete)** operations in MongoDB with examples for each:
+
+---
+
+### 1. **Create Operation**
+- **`insertOne()`**: Inserts a single document into the collection.
+  ```js
+  db.collection.insertOne({ name: "John Doe", age: 25, email: "john@example.com" });
+  ```
+- **`insertMany()`**: Inserts multiple documents into the collection.
+  ```js
+  db.collection.insertMany([
+    { name: "Jane Doe", age: 30, email: "jane@example.com" },
+    { name: "Mark Smith", age: 40, email: "mark@example.com" }
+  ]);
+  ```
+
+---
+
+### 2. **Read Operation**
+- **`find()`**: Retrieves documents from the collection based on a query.
+  ```js
+  // Find all users where age is greater than or equal to 30
+  db.collection.find({ age: { $gte: 30 } });
+
+  // Find all users (no filter)
+  db.collection.find();
+  ```
+
+- **`findOne()`**: Retrieves a single document that matches the query.
+  ```js
+  db.collection.findOne({ name: "John Doe" });
+  ```
+
+---
+
+### 3. **Update Operation**
+- **`updateOne()`**: Updates a single document that matches the query.
+  ```js
+  // Update John's age to 26
+  db.collection.updateOne(
+    { name: "John Doe" },
+    { $set: { age: 26 } }
+  );
+  ```
+
+- **`updateMany()`**: Updates multiple documents that match the query.
+  ```js
+  // Update all users with age less than 30, adding an "isYoung" field
+  db.collection.updateMany(
+    { age: { $lt: 30 } },
+    { $set: { isYoung: true } }
+  );
+  ```
+
+---
+
+### 4. **Delete Operation**
+- **`deleteOne()`**: Deletes a single document that matches the query.
+  ```js
+  db.collection.deleteOne({ name: "John Doe" });
+  ```
+
+- **`deleteMany()`**: Deletes multiple documents that match the query.
+  ```js
+  // Delete all users with age greater than 40
+  db.collection.deleteMany({ age: { $gt: 40 } });
+  ```
+
+---
+
+These are the essential CRUD operations in MongoDB. Each command allows you to interact with data in the database by creating, reading, updating, or deleting documents in a collection.
