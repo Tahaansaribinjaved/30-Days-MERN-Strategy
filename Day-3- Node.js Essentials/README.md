@@ -1,6 +1,6 @@
 # 
 
-# 📝 **Notion Notes: Node.js Essentials - Day 3**
+# 📝 ** Node.js Essentials - Day 3**
 
 ---
 
