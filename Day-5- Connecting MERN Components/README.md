@@ -152,4 +152,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 Thank you for following along with **Day 5**! Keep building and exploring the MERN stack as you enhance your web development skills!
-```
+
