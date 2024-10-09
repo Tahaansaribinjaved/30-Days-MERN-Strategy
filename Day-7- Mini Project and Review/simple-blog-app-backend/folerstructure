@@ -1,0 +1,10 @@
+simple-blog-app-backend
+├── config
+│   └── db.js (for MongoDB connection)
+├── models
+│   └── Post.js (Mongoose schema for blog posts)
+├── routes
+│   └── postRoutes.js (API routes for CRUD operations)
+├── .env (for environment variables like MongoDB URI)
+├── server.js (main entry file)
+└── package.json
